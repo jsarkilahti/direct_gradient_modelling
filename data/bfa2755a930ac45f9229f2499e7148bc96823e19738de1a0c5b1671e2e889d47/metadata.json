@@ -1,0 +1,209 @@
+{
+  "key": "bfa2755a930ac45f9229f2499e7148bc96823e19738de1a0c5b1671e2e889d47",
+  "format_version": 2,
+  "metadata": {
+    "source_sha256": "ef2388ed822f3aef4aa80d6b0f2b466dd80b361786b3eafc7a2957c31ea323a7",
+    "source_path": "data/TANKS/CascadedTanksFiles/dataBenchmark.csv",
+    "recorded_sampling_time": 4.0,
+    "model_sampling_time": 0.04,
+    "resampled": false,
+    "normalize": false,
+    "square_outputs": false,
+    "mean": [
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "validation_raw_samples": 512,
+    "validation_test_overlap": true,
+    "raw_lengths": [
+      1024,
+      1024
+    ],
+    "evaluation_inverse": "affine",
+    "reference_protocol": false,
+    "normalization_rule": "population_std_floor",
+    "aligned_lengths": {
+      "train": 1024,
+      "validation": 512,
+      "test": 1024
+    },
+    "sample_alignment": "simultaneous",
+    "output_before_integration": true,
+    "first_test_target_raw_index": 4,
+    "test_target_samples": 1020
+  },
+  "splits": {
+    "train": {
+      "Ts": 0.04,
+      "metadata": {
+        "source_sha256": "ef2388ed822f3aef4aa80d6b0f2b466dd80b361786b3eafc7a2957c31ea323a7",
+        "source_path": "data/TANKS/CascadedTanksFiles/dataBenchmark.csv",
+        "recorded_sampling_time": 4.0,
+        "model_sampling_time": 0.04,
+        "resampled": false,
+        "normalize": false,
+        "square_outputs": false,
+        "mean": [
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "validation_raw_samples": 512,
+        "validation_test_overlap": true,
+        "raw_lengths": [
+          1024,
+          1024
+        ],
+        "evaluation_inverse": "affine",
+        "reference_protocol": false,
+        "normalization_rule": "population_std_floor",
+        "sample_alignment": "simultaneous",
+        "source_sample_alignment": "simultaneous",
+        "sample_definition": "(u_k, y_k, x_k)"
+      }
+    },
+    "validation": {
+      "Ts": 0.04,
+      "metadata": {
+        "source_sha256": "ef2388ed822f3aef4aa80d6b0f2b466dd80b361786b3eafc7a2957c31ea323a7",
+        "source_path": "data/TANKS/CascadedTanksFiles/dataBenchmark.csv",
+        "recorded_sampling_time": 4.0,
+        "model_sampling_time": 0.04,
+        "resampled": false,
+        "normalize": false,
+        "square_outputs": false,
+        "mean": [
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "validation_raw_samples": 512,
+        "validation_test_overlap": true,
+        "raw_lengths": [
+          1024,
+          1024
+        ],
+        "evaluation_inverse": "affine",
+        "reference_protocol": false,
+        "normalization_rule": "population_std_floor",
+        "sample_alignment": "simultaneous",
+        "source_sample_alignment": "simultaneous",
+        "sample_definition": "(u_k, y_k, x_k)"
+      }
+    },
+    "test": {
+      "Ts": 0.04,
+      "metadata": {
+        "source_sha256": "ef2388ed822f3aef4aa80d6b0f2b466dd80b361786b3eafc7a2957c31ea323a7",
+        "source_path": "data/TANKS/CascadedTanksFiles/dataBenchmark.csv",
+        "recorded_sampling_time": 4.0,
+        "model_sampling_time": 0.04,
+        "resampled": false,
+        "normalize": false,
+        "square_outputs": false,
+        "mean": [
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "validation_raw_samples": 512,
+        "validation_test_overlap": true,
+        "raw_lengths": [
+          1024,
+          1024
+        ],
+        "evaluation_inverse": "affine",
+        "reference_protocol": false,
+        "normalization_rule": "population_std_floor",
+        "sample_alignment": "simultaneous",
+        "source_sample_alignment": "simultaneous",
+        "sample_definition": "(u_k, y_k, x_k)"
+      }
+    }
+  },
+  "configuration": {
+    "system": "CT",
+    "data_root": "data/TANKS",
+    "dataset_filename": "dataBenchmark.csv",
+    "generation_mode": "measured",
+    "data_seed": 123,
+    "split_seed": 456,
+    "train_trajectories": 200,
+    "active_train_trajectories": 20,
+    "validation_trajectories": 8,
+    "test_trajectories": 20,
+    "trajectory_length": 1000,
+    "sampling_time": 4.0,
+    "simulation_integrator": "rk4",
+    "simulation_substeps": 1,
+    "simulation_dtype": "float32",
+    "simulation_device": "cpu",
+    "initial_position_range": [
+      -1.0,
+      1.0
+    ],
+    "initial_velocity_range": [
+      -0.5,
+      0.5
+    ],
+    "control_base_frequency": 0.01,
+    "control_num_harmonics": 100,
+    "control_amplitude": 0.5,
+    "control_zero_probability": 0.0,
+    "control_zero_interval_durations": [
+      0.1,
+      0.15,
+      0.25,
+      0.5
+    ],
+    "control_phase_segment_length": 1000,
+    "continuous_train_segments": 20,
+    "continuous_validation_segments": 8,
+    "continuous_test_segments": 20,
+    "control_scale_input": true,
+    "physical_parameters": {},
+    "source_alignment": "simultaneous",
+    "data_alignment": "causal",
+    "output_before_integration": true,
+    "train_columns": [
+      "uEst",
+      "yEst"
+    ],
+    "validation_columns": [
+      "uVal",
+      "yVal"
+    ],
+    "sampling_time_column": "Ts",
+    "validation_raw_samples": 512,
+    "noise_snr_train": 50.0,
+    "noise_snr_validation": 50.0,
+    "noise_snr_test": null,
+    "noise_seed_train": 1000,
+    "noise_seed_validation": 1001,
+    "noise_seed_test": 1002,
+    "normalization": {
+      "enabled": true,
+      "normalize_input": true,
+      "normalize_output": true,
+      "statistics_source": "reference",
+      "epsilon": 1e-08,
+      "inverse_transform_predictions": true,
+      "inverse_transform_targets": true,
+      "physical_unit_metrics": true,
+      "nrmse_denominator": "full_record"
+    }
+  }
+}
