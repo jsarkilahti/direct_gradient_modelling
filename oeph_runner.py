@@ -89,7 +89,7 @@ RECONSTRUCTION_DIRECTORY = None  # Path("results/previous_run")
 # All results, checkpoints, histories, statistics and plots are saved.
 # Number of model seeds PER study level when EXPLICIT_MODEL_SEEDS is None.
 # - Available options: numeric value; keep within the physical or algorithmic constraints described above.
-NUM_SEEDS = 3#10
+NUM_SEEDS = 10
 # Master seed used to generate model seeds; not itself necessarily a model initialization seed.
 # - Available options: numeric value; keep within the physical or algorithmic constraints described above.
 SEED_MASTER = 123 if SYSTEM == "MSD" else 666
@@ -588,7 +588,7 @@ MSD_TRAINING_TEST_SEGMENT_LENGTH_TIME = 10.0  # MSD PH ablation
 MSD_TRAINING_DROP_LAST = False
 # Consecutive phase durations in epochs. Their sum is the total number of epochs.
 # - Available options: tuple of positive integer epoch-block lengths.
-MSD_TRAINING_FIT_PHASES = (1,1,1)#(10, 10, 10, 10, 10, 20)
+MSD_TRAINING_FIT_PHASES = (10, 10, 10, 10, 10, 20)
 # None: train at fixed horizon. Otherwise {zero-based epoch: active horizon}; final schedule value defines the final horizon. For horizon ablation, fixed horizons are used.
 # - Available options: None where supported, or {epoch_index: value} schedule.
 MSD_TRAINING_PREDICTION_HORIZON_SCHEDULE = {0: 5}#, 4: 200}  # original MSD warm-up: one-based epochs 1 and 5
@@ -928,7 +928,7 @@ CT_TRAINING_TEST_SEGMENT_LENGTH_TIME = None
 CT_TRAINING_DROP_LAST = True
 # Consecutive phase durations in epochs. Their sum is the total number of epochs.
 # - Available options: tuple of positive integer epoch-block lengths.
-CT_TRAINING_FIT_PHASES = (1,1,1)#(10, 10, 10, 20, 20, 30, 50, 50, 50, 50, 100, 100, 200)
+CT_TRAINING_FIT_PHASES = (10, 10, 10, 20, 20, 30, 50, 50, 50, 50, 100, 100, 200)
 # None: train at fixed horizon. Otherwise {zero-based epoch: active horizon}; final schedule value defines the final horizon. For horizon ablation, fixed horizons are used.
 # - Available options: None where supported, or {epoch_index: value} schedule.
 CT_TRAINING_PREDICTION_HORIZON_SCHEDULE = None
